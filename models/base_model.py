@@ -38,7 +38,7 @@ class BaseModel:
         """Return official string representation"""
 
         return "[{}] ({}) {}".\
-                format(type(self).__name__, self.id, self.__dict__)
+            format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the public instance attribute updated_at"""
