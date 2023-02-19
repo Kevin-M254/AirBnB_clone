@@ -16,12 +16,12 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, line):
         """Catch command if nothing matches"""
-        print("DEF:::", line)
+        # Print("DEF:::", line)
         self._precmd(line)
 
     def _precmd(self, line):
         """Intercepts commands to test for class.syntax()"""
-        print("PRECMD:::", line)
+        # print("PRECMD:::", line)
         match = re.search(r"^(\w*)\.(\w+)(?:\(([^)]*)\))$", line)
         if not match:
             return line
@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
             uid = args
             attr_or_dict = False
 
-        attr_and_value == ""
+        attr_and_value = ""
         if method == "update" and attr_or_dict:
             match_dict = re.search('^({.*})$', attr_or_dict)
             if match_dict:
